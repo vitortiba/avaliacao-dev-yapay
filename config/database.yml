@@ -49,6 +49,7 @@ test:
 #
 production:
   <<: *default
-  database: avaliacao_production
-  username: avaliacao-yapay
-  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+  host: us-cdbr-iron-east-03.cleardb.net
+  database: heroku_cd4a9524b964b86
+  username: bf3afc9d743a9c
+  password: eaa16105
