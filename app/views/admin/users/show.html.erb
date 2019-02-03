@@ -1,0 +1,19 @@
+<%= render :partial => 'admin/navbar' %>
+<h2>Detalhe do Usuário:</h2>
+<p>
+  <strong>Nome:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>CPF:</strong>
+  <%= @user.cpf %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<%= link_to 'Editar', edit_admin_user_path(@user) %> |
+<%= link_to 'Voltar', admin_users_path %>

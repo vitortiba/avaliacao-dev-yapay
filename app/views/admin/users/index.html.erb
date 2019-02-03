@@ -1,0 +1,29 @@
+<%= render :partial => 'admin/navbar' %>
+<h2>Lista de Usuários:</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Email</th>
+      <th class="text-center">Ação</th>
+    </tr>
+  </thead>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.cpf %></td>
+      <td><%= user.email %></td>
+      <td class="d-flex justify-content-around">
+        <%= link_to 'Detalhes', admin_user_path(user) %>
+        <%= link_to 'Editar', edit_admin_user_path(user) %>
+        <%= link_to 'Excluir', admin_user_path(user),
+                               method: :delete,
+                               data: { confirm: 'Are you sure?' } %>
+      </td>
+    </tr>
+    </tr>
+  <% end %>
+</table>

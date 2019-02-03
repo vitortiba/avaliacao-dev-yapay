@@ -1,0 +1,47 @@
+<%= form_for [:admin, @user], local: true do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@user.errors.count, "error") %> prohibited
+        this user from being saved:
+      </h2>
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <label> Nome: </label>
+    <%= form.text_field :name, autofocus: true %>
+  </p>
+
+  <p>
+    <label> CPF: </label>
+    <%= form.text_field :cpf %>
+  </p>
+
+  <div class="field">
+    <label> Email: </label> <br>
+    <%= form.email_field :email, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <label> Senha: (Necessário redigitar a senha ou uma nova)</label>
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> caracteres minimos)</em>
+    <% end %><br />
+    <%= form.password_field :password, autocomplete: "password" %>
+  </div>
+
+  <div class="field">
+    <label> Confirme sua senha: </label> <br>
+    <%= form.password_field :password_confirmation, autocomplete: "password" %>
+  </div>
+
+  <div class="actions mt-2">
+    <%= form.submit "Modificar" %>
+  </div>
+<% end %>

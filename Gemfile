@@ -15,7 +15,18 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
+
+#Utilizado para login/registro
 gem 'devise'
+
+#Usado para upload de arquivos
+gem "paperclip", "~> 6.0.0"
+
+gem 'autoprefixer-rails'
+gem 'bootstrap'
+gem 'jquery-rails'
+
+gem 'rspec-rails'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -52,6 +63,7 @@ group :development do
 end
 
 group :test do
+  gem 'factory_girl_rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'

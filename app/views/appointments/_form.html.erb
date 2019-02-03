@@ -1,0 +1,50 @@
+<div class="d-flex justify-content-around">
+  <div class="col-md-6">
+    <%= image_tag @service.image.url(:medium) %>
+
+    <p>
+      <strong>Descrição:</strong>
+      <%= @service.description %>
+    </p>
+
+    <p>
+      <strong>Valor:</strong>
+      <%= @service.value %>
+    </p>
+  </div>
+
+  <%= form_with scope: :appointment, url: service_appointments_path, class: "col-md-6", local: true do |form| %>
+    <% if @appointment.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@appointment.errors.count, "error") %> prohibited
+          this service from being saved:
+        </h2>
+        <ul>
+          <% @appointment.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <p>
+      <%= form.label :name %><br>
+      <%= form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :email %><br>
+      <%= form.email_field :email %>
+    </p>
+
+    <p>
+      <%  form.label :date %>
+      <%= form.datetime_select :date %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
+</div>

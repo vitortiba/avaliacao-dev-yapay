@@ -2,8 +2,9 @@ version: '3'
 services:
   web:
     build: .
+    command: bash -c "bundle exec puma -p 3000"
     volumes:
-     - .:/myapp
+     - .:/avaliacao-yapay
     ports:
      - "3000:3000"
     depends_on:

@@ -1,0 +1,17 @@
+<%= render :partial => 'admin/navbar' %>
+<h2>Detalhes do agendamento:</h2>
+
+<%= image_tag @service.image.url(:medium) %>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @service.description %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @service.value %>
+</p>
+
+<%= link_to 'Editar', edit_admin_service_path(@service) %> |
+<%= link_to 'Voltar', admin_services_path %>

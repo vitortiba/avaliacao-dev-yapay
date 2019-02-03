@@ -1,0 +1,26 @@
+<%= render :partial => './navbar' %>
+<h2>Lista de Serviços</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Imagem</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th class="text-center">Ação</th>
+    </tr>
+  </thead>
+
+  <% @services.each do |service| %>
+    <tr>
+      <td><%= image_tag service.image.url(:thumb) %></td>
+      <td><%= service.description %></td>
+      <td><%= service.value %></td>
+      <td class="d-flex justify-content-around">
+        <%= link_to 'Agendar', new_service_appointment_path(service) %>
+        <%= link_to 'Detalhes', service_path(service) %>
+      </td>
+    </tr>
+    </tr>
+  <% end %>
+</table>

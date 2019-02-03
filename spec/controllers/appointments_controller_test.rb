@@ -1,0 +1,2 @@
+RSpec.describe AppointmentsController do
+end

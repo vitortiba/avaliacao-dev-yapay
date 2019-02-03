@@ -1,9 +1,8 @@
 class CreateServices < ActiveRecord::Migration[5.2]
   def change
     create_table :services do |t|
-      t.text :description
-      t.float :value
-      t.string :image_path
+      t.string :description, null: false
+      t.float :value, null: false
 
       t.timestamps
     end

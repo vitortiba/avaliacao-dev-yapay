@@ -1,0 +1,30 @@
+<%= render :partial => 'admin/navbar' %>
+
+<h2>Lista de Serviços:</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Imagem</th>
+      <th>Descrição</th>
+      <th>Valor</th>
+      <th class="text-center">Ação</th>
+    </tr>
+  </thead>
+
+  <% @services.each do |service| %>
+    <tr>
+      <td><%= image_tag service.image.url(:thumb) %></td>
+      <td><%= service.description %></td>
+      <td><%= service.value %></td>
+      <td class="d-flex justify-content-around">
+        <%= link_to 'Detalhes', admin_service_path(service) %>
+        <%= link_to 'Editar', edit_admin_service_path(service) %>
+        <%= link_to 'Excluir', admin_service_path(service),
+                               method: :delete,
+                               data: { confirm: 'Confirmação' } %>
+      </td>
+    </tr>
+    </tr>
+  <% end %>
+</table>

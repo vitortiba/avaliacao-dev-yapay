@@ -1,0 +1,27 @@
+<%= render :partial => 'admin/navbar' %>
+<h2>Lista de Agendamentos:</h2>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Nome do contratante</th>
+      <th>Email do contratante</th>
+      <th>Data</th>
+      <th>Serviço</th>
+      <th>Ação</th>
+    </tr>
+  </thead>
+
+  <% @appointments.each do |appointment| %>
+    <tr>
+      <td><%= appointment.name %></td>
+      <td><%= appointment.email %></td>
+      <td><%= appointment.date %></td>
+      <td><%= appointment.service.description %></td>
+      <td><%= link_to 'Excluir', admin_appointments_path(appointment),
+                      method: :delete,
+                      data: { confirm: 'Confirmação' } %></td>
+    </tr>
+    </tr>
+  <% end %>
+</table>

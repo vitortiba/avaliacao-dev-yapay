@@ -1,0 +1,16 @@
+<%= render :partial => './navbar' %>
+<h2>Detalhes do serviço</h2>
+
+<%= image_tag @service.image.url(:medium) %>
+
+<p>
+  <strong>Descrição:</strong>
+  <%= @service.description %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= @service.value %>
+</p>
+
+<%= link_to 'Voltar', services_path %>

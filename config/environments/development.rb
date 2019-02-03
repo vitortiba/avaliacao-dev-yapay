@@ -1,4 +1,5 @@
 Rails.application.configure do
+  config.reload_classes_only_on_change = false
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -58,4 +59,24 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.action_mailer.delivery_method = :sendmail
+  # Defaults to:
+  # config.action_mailer.sendmail_settings = {
+  #   location: '/usr/sbin/sendmail',
+  #   arguments: '-i'
+  # }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {from: 'e9276dc6b0-29dce3@inbox.mailtrap.io'}
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :user_name => '203a024bacf84a',
+      :password => '6805573281551b',
+      :address => 'smtp.mailtrap.io',
+      :domain => 'smtp.mailtrap.io',
+      :port => '2525',
+      :authentication => :cram_md5
+  }
 end

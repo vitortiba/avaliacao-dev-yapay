@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+<h1>Olá, <%= @appointment.name %></h1>
+<p>
+  Seu agendamento foi marcado para: <%= @appointment.date %>.<br>
+</p>
+<p>
+  Referente ao serviço <%= @service.description %>
+  de valor: <%= @service.value %>
+</p>
+</body>
+</html>
