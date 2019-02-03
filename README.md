@@ -1,9 +1,10 @@
 # Avaliação Desenvolvedor YAPAY 
+**É possível encontrar esse sistema já em Produção na url:** https://avaliacao-yapay.herokuapp.com/
 
 Este repositório foi feito para a avaliação para Desenvolvedor Júnior da YAPAY.
 Foi utilizado Ruby/Ruby on Rails para a criação do projeto, que consiste em
-um sistema de agendamento de serviços e um área de gerenciamento.<br>
-Para ese projeto foi utilizado diferentes tecnologias e um conhecimento geral
+um sistema de agendamento de serviços e uma área de gerenciamento.<br>
+Para ese projeto foi utilizado diversas tecnologias e um conhecimento geral
 na programação WEB.
 
 ## Começar a utilizar
