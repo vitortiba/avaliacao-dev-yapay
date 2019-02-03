@@ -6,7 +6,7 @@ um sistema de agendamento de serviços e um área de gerenciamento.<br>
 Para ese projeto foi utilizado diferentes tecnologias e um conhecimento geral
 na programação WEB.
 
-##Começar a utilizar
+## Começar a utilizar
 
 <i>Este projeto utiliza <a href="https://www.docker.com/">DOCKER e DOCKER-COMPOSE</a></i> <br><br>
 De início, é necessário utilizar o seguinte comando na pasta do projeto: <br>
@@ -26,7 +26,7 @@ Caso altere algo no Gemfile, é necessário reiniciar o container, com o `--buil
 `127.0.0.1:3000` será a aplicação; <br>
 `127.0.0.1` será o PHPMyadmin caso queria ver o banco.
 
-##Criar banco de dados
+## Criar banco de dados
 Para criar o banco de dados de forma correta é necessário alguns passos.
 - `docker-compose run web rake db:create` (Cria a database)
 - `docker-compose run web rake db:migrate` (Criar as tabelas)
@@ -34,7 +34,7 @@ Para criar o banco de dados de forma correta é necessário alguns passos.
     - Email: admin@teste.com
     - Senha: 123456
 
-##Rodar os testes
+## Rodar os testes
 Para rodar os testes, é necessário primeiro criar o banco de teste:
 - `docker-compose run web rake db:create RAILS_ENV=test` (Cria a database de teste)
 - `docker-compose run web rake db:migrate RAILS_ENV=test` (Criar as tabelas de teste)
