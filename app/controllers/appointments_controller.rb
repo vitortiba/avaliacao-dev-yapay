@@ -18,7 +18,7 @@ class AppointmentsController < ApplicationController
 
   private
   def appointment_params
-    params.require(:appointment).permit(:name, :email, :date)
+    params.require(:appointment).permit(:name, :email, :date, :contact)
   end
 
   def find_service
