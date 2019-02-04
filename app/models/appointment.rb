@@ -4,5 +4,5 @@ class Appointment < ApplicationRecord
   validates :name, presence: true
   validates :email, presence:true
   validates :date, presence: true
-  validates :contact, presence: true, format: { with: /\A\d+\z/ }
+  validates :contact, presence: true
 end
