@@ -48,6 +48,12 @@ alteração em `config/environments/development.rb`
 
 
 ## Rodar os testes
+
+Os testes **não estão completos**, foi apenas feito a estrutura de testes utilizando:
+- Rspec
+- Factory Girl 
+
+
 Para rodar os testes, é necessário primeiro criar o banco de teste:
 - `docker-compose run web rake db:create RAILS_ENV=test` (Cria a database de teste)
 - `docker-compose run web rake db:migrate RAILS_ENV=test` (Criar as tabelas de teste)
