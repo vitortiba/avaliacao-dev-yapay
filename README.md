@@ -13,9 +13,11 @@ na programação WEB.
 ## Começar a utilizar
 
 <i>Este projeto utiliza <a href="https://www.docker.com/">DOCKER e DOCKER-COMPOSE</a></i> <br><br>
-De início, é necessário utilizar o seguinte comando na pasta do projeto: <br>
-`docker-compose up -d --build` <br>
-Este comando faz o build do Dockerfile e já sobe os serviços dependentes:
+De início, é necessário utilizar os seguintes comandos na pasta do projeto: <br>
+`docker-compose build` <br>
+`docker-compose up` <br>
+Caso o container do **MYSQL** não fique de pé, rode novamente o `docker-compose up` <br>
+Estes comandos fazem o build do Dockerfile e sobem os serviços dependentes:
 - Mysql 5.7
 - Ruby 2.5 / Ruby on Rails
 - PHPMyadmin
@@ -46,6 +48,12 @@ alteração em `config/environments/development.rb`
 
 
 ## Rodar os testes
+
+Os testes **não estão completos**, foi apenas feito a estrutura de testes utilizando:
+- Rspec
+- Factory Girl 
+
+
 Para rodar os testes, é necessário primeiro criar o banco de teste:
 - `docker-compose run web rake db:create RAILS_ENV=test` (Cria a database de teste)
 - `docker-compose run web rake db:migrate RAILS_ENV=test` (Criar as tabelas de teste)
