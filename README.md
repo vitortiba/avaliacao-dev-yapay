@@ -1,5 +1,8 @@
 # Avaliação Desenvolvedor YAPAY 
 **É possível encontrar esse sistema já em Produção na url:** https://avaliacao-yapay.herokuapp.com/
+- Para acessar o ADMIN em **produção**: 
+-- Email: admin@admin.com
+-- Senha: mudar123
 
 Este repositório foi feito para a avaliação para Desenvolvedor Júnior da YAPAY.
 Foi utilizado Ruby/Ruby on Rails para a criação do projeto, que consiste em
