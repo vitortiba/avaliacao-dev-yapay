@@ -21,7 +21,7 @@ module Admin
       @service = Service.new(service_params)
 
       if @service.save
-        redirect_to admin_users_path
+        redirect_to admin_services_path
       else
         render 'new'
       end
