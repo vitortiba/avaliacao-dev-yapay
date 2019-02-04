@@ -35,6 +35,13 @@ Para criar o banco de dados de forma correta é necessário alguns passos.
     - Email: admin@teste.com
     - Senha: 123456
 
+## Envio de emails
+No momento de agendamento, é enviado um email de informações sobre o agendamento. <br>
+Hoje está configurado em produção e em desenvolvimento o envio do email interceptado
+pelo mailtrap, caso queira mudar o mailtrap ou email a ser enviado é possível a
+alteração em `config/environments/development.rb`
+
+
 ## Rodar os testes
 Para rodar os testes, é necessário primeiro criar o banco de teste:
 - `docker-compose run web rake db:create RAILS_ENV=test` (Cria a database de teste)
