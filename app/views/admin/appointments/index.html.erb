@@ -20,7 +20,7 @@
       <td><%= appointment.contact %></td>
       <td><%= appointment.date %></td>
       <td><%= appointment.service.description %></td>
-      <td><%= link_to 'Excluir', admin_appointments_path(appointment),
+      <td><%= link_to 'Excluir', admin_appointment_path(appointment),
                       method: :delete,
                       data: { confirm: 'Confirmação' } %></td>
     </tr>
