@@ -30,7 +30,7 @@ Estes comandos fazem o build do Dockerfile e sobem os serviços dependentes:
 o docker-compose feitos já gerenciam isso logo após subir o container. <br>
 Caso altere algo no Gemfile, é necessário reiniciar o container, com o `--build`. <br><br>
 `127.0.0.1:3000` será a aplicação; <br>
-`127.0.0.1` será o PHPMyadmin caso queria ver o banco.
+`127.0.0.1` será o PHPMyadmin caso queira ver o banco.
 
 ## Criar banco de dados
 Para criar o banco de dados de forma correta é necessário alguns passos.
